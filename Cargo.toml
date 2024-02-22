@@ -1,0 +1,28 @@
+[package]
+name = "rusty-embedded-training"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# Cortex run time , requires memory.x file
+cortex-m-rt = "0.7.3"
+
+# Embedded global allocator
+embedded-alloc = "0.5.1"
+
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"]}
+
+# The dependency of rp2040-hal
+embedded-hal = "0.2.5"
+
+# HAL for rp
+rp2040-hal = "0.9.2"
+
+# Handling panics without std
+panic-halt = "0.2.0"
+
+# Rust boot code for rp2040
+rp2040-boot2 = "0.3.0"
